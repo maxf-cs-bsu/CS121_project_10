@@ -45,7 +45,7 @@ public class CheckingAccount implements HasMenu, Serializable {
         this.makeDeposit();
       } else if (response.equals("3")){
         System.out.println("  Making a Withdrawal... ");
-	this.makeWthdrawal();
+	this.makeWithdrawal();
       } else {
         System.out.println("  ERROR: Response most be 0, 1, 2, or 3. Try again... ");
       } // end of if
@@ -75,12 +75,30 @@ public class CheckingAccount implements HasMenu, Serializable {
       System.out.println("Error: illegal input. Changing to 0");
       result = 0d;
     } // end try
-    return result
+    return result;
   } // end of double
 
   public void checkBalance(){
     System.out.print("Current Balance: ");
-    System.out.println(this.getBalanceString);
+    System.out.println(this.getBalanceString());
   } // end of checkBalance
+  
+  public void makeDeposit(){
+    System.out.print("Enter amount to deposit: ");
+    double deposit = this.getDouble();
+    this.balance += deposit;
+    System.out.println("New Balance: " + this.getBalanceString());
+  } // end of makeDeposit
+
+  public void makeWithdrawal(){
+    System.out.print("Enter amount to withdrawl: ");
+    double withdrawal = this.getDouble();
+    if (withdrawal > this.balance){
+      System.out.println("Insufficient funds...");
+    } else {
+      this.balance -= withdrawal;
+    } // end if
+    System.out.println("New Balance: " + this.getBalanceString());
+  } // end of makeWithdrawl
 
 } // end of CheckingAccount class
