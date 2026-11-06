@@ -27,6 +27,7 @@ public class CheckingAccount implements HasMenu, Serializable {
     System.out.println();
     System.out.print("Enter a number 0-3 to select: ");
     String response = input.nextLine();
+    System.out.println();
     return response;
   } // end of string menu
   
@@ -38,16 +39,16 @@ public class CheckingAccount implements HasMenu, Serializable {
       if(response.equals("0")){
         keepGoing = false;
       } else if (response.equals("1")){
-        System.out.println("  Checking Balance... ");
+        //System.out.println("  Checking Balance... ");
 	this.checkBalance();
       } else if (response.equals("2")){
-        System.out.println("  Making a Deposit... ");
+        //System.out.println("  Making a Deposit... ");
         this.makeDeposit();
       } else if (response.equals("3")){
-        System.out.println("  Making a Withdrawal... ");
+        //System.out.println("  Making a Withdrawal... ");
 	this.makeWithdrawal();
       } else {
-        System.out.println("  ERROR: Response most be 0, 1, 2, or 3. Try again... ");
+        System.out.println("Response must be 0, 1, 2, or 3...");
       } // end of if
     } // end of while
   } // end of start
