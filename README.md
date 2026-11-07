@@ -1,4 +1,5 @@
 # Bank on it - Part 1
+### UML provided on lab assignment page.
 # CheckingAccount()
 ### String menu()
 ```
