@@ -32,7 +32,12 @@ public class Customer extends User implements Serializable {
   } // end of getReport
   
   public void changePIN(){
-    `
+    Scanner input = new Scanner(System.in);
+    System.out.print("Enter new PIN: ");
+    String newPIN = input.nextLine();
+    setPIN(newPIN);
+    System.out.println("New PIN is: " + this.PIN);
+    login();
   } // end of changePIN
 
   public void start(){
@@ -53,6 +58,7 @@ public class Customer extends User implements Serializable {
       } else if (result.equals("3")){
         System.out.println();
         System.out.println("Change PIN: ");
+	changePIN();
       } else {
         System.out.println("Please enter 0, 1, 2, or 3 as input...");
       }

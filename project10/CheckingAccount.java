@@ -20,6 +20,8 @@ public class CheckingAccount implements HasMenu, Serializable {
   public String menu(){
     Scanner input = new Scanner(System.in);
     System.out.println();
+    System.out.println("-Account Menu-");
+    System.out.println();
     System.out.println("0) Quit ");
     System.out.println("1) Check Balance ");
     System.out.println("2) Make a Deposit ");
