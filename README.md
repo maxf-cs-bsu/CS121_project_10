@@ -66,4 +66,31 @@ else
   system.out.println("invalid username")
 return result
 ```
-
+# Customer()
+### Customer()
+```
+default username = Alex
+default PIN = 1234
+```
+### changePIN()
+```
+prompt user to enter a new PIN
+setPIN(newPIN)
+system.out.println("New PIN is: " + PIN)
+```
+### start()
+```
+keepGoing = true
+while(keepGoing)
+  result = menu()
+  if result = 0
+    keepGoing = false
+  else if result = 1
+    checking.start
+  else if result = 2
+    savings.start
+  else if result = 3
+    changePIN()
+  else
+    system.out.println("please enter 0, 1, 2, or 3.")
+```

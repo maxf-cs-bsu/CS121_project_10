@@ -37,7 +37,6 @@ public class Customer extends User implements Serializable {
     String newPIN = input.nextLine();
     setPIN(newPIN);
     System.out.println("New PIN is: " + this.PIN);
-    login();
   } // end of changePIN
 
   public void start(){
